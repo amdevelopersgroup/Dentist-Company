@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+}
+
+/* Prevent horizontal overflow on every viewport */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+  max-width: 100%;
+}
+
+/* Ensure images never cause horizontal scroll */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Simplify animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
